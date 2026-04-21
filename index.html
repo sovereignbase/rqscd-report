@@ -3,7 +3,190 @@
   <head>
     <meta charset="utf-8" />
     <title>Risks of the Remote QSCD Model in eIDAS 2.0</title>
-    <link rel="icon" type="image/png" href="https://sovereignbase.dev/sovereignbase_logo.png" />
+    <meta
+      name="description"
+      content="Technical report on residual remote-signing risks in the eIDAS 2.0 remote QSCD model, focusing on sole control, signer intent, and verifier-checkable evidence gaps."
+    />
+    <meta
+      name="keywords"
+      content="remote QSCD, eIDAS 2.0, remote signing, sole control, signer intent, verifier-checkable evidence, ETSI, qualified remote signatures"
+    />
+    <meta name="author" content="Jori Lehtinen" />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <meta name="application-name" content="rqscd-report" />
+    <link rel="canonical" href="https://sovereignbase.dev/rqscd-report/" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://sovereignbase.dev/sovereignbase_logo.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://sovereignbase.dev/sovereignbase_logo.png"
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Sovereignbase" />
+    <meta
+      property="og:title"
+      content="Risks of the Remote QSCD Model in eIDAS 2.0"
+    />
+    <meta
+      property="og:description"
+      content="Technical report on residual remote-signing risks in the eIDAS 2.0 remote QSCD model, focusing on sole control, signer intent, and verifier-checkable evidence gaps."
+    />
+    <meta property="og:url" content="https://sovereignbase.dev/rqscd-report/" />
+    <meta
+      property="og:image"
+      content="https://sovereignbase.dev/sovereignbase_social_sharing_image.png"
+    />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Risks of the Remote QSCD Model in eIDAS 2.0"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Risks of the Remote QSCD Model in eIDAS 2.0"
+    />
+    <meta
+      name="twitter:description"
+      content="Technical report on residual remote-signing risks in the eIDAS 2.0 remote QSCD model, focusing on sole control, signer intent, and verifier-checkable evidence gaps."
+    />
+    <meta
+      name="twitter:image"
+      content="https://sovereignbase.dev/sovereignbase_social_sharing_image.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Risks of the Remote QSCD Model in eIDAS 2.0"
+    />
+    <meta name="twitter:creator" content="@jortsupetterson" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://sovereignbase.dev/rqscd-report/#organization",
+            "name": "Sovereignbase",
+            "url": "https://github.com/sovereignbase",
+            "alternateName": ["@sovereignbase"],
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://sovereignbase.dev/sovereignbase_logo.png",
+              "width": 320,
+              "height": 320
+            },
+            "sameAs": [
+              "https://github.com/sovereignbase",
+              "https://jsr.io/@sovereignbase",
+              "https://www.npmjs.com/org/sovereignbase"
+            ]
+          },
+          {
+            "@type": "Person",
+            "@id": "https://sovereignbase.dev/rqscd-report/#author",
+            "name": "Jori Lehtinen",
+            "url": "https://github.com/jortsupetterson",
+            "alternateName": ["jortsupetterson", "@jortsupetterson"],
+            "sameAs": [
+              "https://github.com/jortsupetterson",
+              "https://www.npmjs.com/~jortsupetterson",
+              "https://jsr.io/user/ab186a13-a64f-429e-a757-927aa4fa6e6c",
+              "https://linkedin.com/in/jortsupetterson",
+              "https://x.com/jortsupetterson",
+              "https://www.youtube.com/@jortsupetterson"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://sovereignbase.dev/rqscd-report/#website",
+            "url": "https://sovereignbase.dev/rqscd-report/",
+            "name": "rqscd-report",
+            "inLanguage": "en",
+            "publisher": {
+              "@id": "https://sovereignbase.dev/rqscd-report/#organization"
+            }
+          },
+          {
+            "@type": "TechArticle",
+            "@id": "https://sovereignbase.dev/rqscd-report/#article",
+            "headline": "Risks of the Remote QSCD Model in eIDAS 2.0",
+            "name": "Risks of the Remote QSCD Model in eIDAS 2.0",
+            "url": "https://sovereignbase.dev/rqscd-report/",
+            "description": "Technical report on residual remote-signing risks in the eIDAS 2.0 remote QSCD model, focusing on sole control, signer intent, and verifier-checkable evidence gaps.",
+            "inLanguage": "en",
+            "isPartOf": {
+              "@id": "https://sovereignbase.dev/rqscd-report/#website"
+            },
+            "mainEntityOfPage": {
+              "@id": "https://sovereignbase.dev/rqscd-report/#webpage"
+            },
+            "author": {
+              "@id": "https://sovereignbase.dev/rqscd-report/#author"
+            },
+            "publisher": {
+              "@id": "https://sovereignbase.dev/rqscd-report/#organization"
+            },
+            "keywords": [
+              "remote QSCD",
+              "eIDAS 2.0",
+              "remote signing",
+              "sole control",
+              "signer intent",
+              "verifier-checkable evidence",
+              "ETSI",
+              "qualified remote signatures"
+            ],
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://sovereignbase.dev/sovereignbase_social_sharing_image.png",
+              "width": 1200,
+              "height": 630
+            }
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://sovereignbase.dev/rqscd-report/#webpage",
+            "url": "https://sovereignbase.dev/rqscd-report/",
+            "name": "Risks of the Remote QSCD Model in eIDAS 2.0",
+            "description": "Technical report on residual remote-signing risks in the eIDAS 2.0 remote QSCD model, focusing on sole control, signer intent, and verifier-checkable evidence gaps.",
+            "inLanguage": "en",
+            "isPartOf": {
+              "@id": "https://sovereignbase.dev/rqscd-report/#website"
+            },
+            "about": {
+              "@id": "https://sovereignbase.dev/rqscd-report/#article"
+            },
+            "author": {
+              "@id": "https://sovereignbase.dev/rqscd-report/#author"
+            },
+            "publisher": {
+              "@id": "https://sovereignbase.dev/rqscd-report/#organization"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "https://sovereignbase.dev/sovereignbase_social_sharing_image.png",
+              "width": 1200,
+              "height": 630
+            },
+            "relatedLink": [
+              "https://github.com/sovereignbase",
+              "https://github.com/sovereignbase/rqscd-report",
+              "https://github.com/jortsupetterson",
+              "https://sovereignbase.dev/lqscd-report/"
+            ]
+          }
+        ]
+      }
+    </script>
     <style>
       .flow-figure {
         margin: 1em 0 1.4em;
@@ -173,7 +356,7 @@
           LQSCDREPORT: {
             title:
               "LQSCD report: local qualified-signature control model (project reference)",
-            href: "https://z-base.github.io/lqscd-report/",
+            href: "https://sovereignbase.dev/lqscd-report/",
             publisher: "z-base project",
           },
         },
@@ -244,7 +427,9 @@
           <dfn id="dfn-eidas"
             ><abbr
               title="electronic Identification, Authentication and trust Services"
-              >eIDAS</abbr></dfn>
+              >eIDAS</abbr
+            ></dfn
+          >
         </dt>
         <dd>
           [=EU=] regulation for electronic identification and trust services
@@ -252,25 +437,29 @@
           [[EIDAS2024_1183]].
         </dd>
 
-        <dt><dfn id="dfn-eu"><abbr title="European Union">EU</abbr></dfn></dt>
+        <dt>
+          <dfn id="dfn-eu"><abbr title="European Union">EU</abbr></dfn>
+        </dt>
         <dd>The jurisdictional legal framework referenced in this report.</dd>
 
         <dt>
-          <dfn id="dfn-tsp"><abbr title="Trust Service Provider">TSP</abbr></dfn>
+          <dfn id="dfn-tsp"
+            ><abbr title="Trust Service Provider">TSP</abbr></dfn
+          >
         </dt>
-        <dd>
-          Organization that provides one or more trust services in scope.
-        </dd>
+        <dd>Organization that provides one or more trust services in scope.</dd>
 
         <dt>
           <dfn id="dfn-qtsp"
-            ><abbr title="Qualified Trust Service Provider">QTSP</abbr></dfn>
+            ><abbr title="Qualified Trust Service Provider">QTSP</abbr></dfn
+          >
         </dt>
         <dd>A [=TSP=] with qualified status under [=eIDAS=].</dd>
 
         <dt>
           <dfn id="dfn-qscd"
-            ><abbr title="Qualified Signature Creation Device">QSCD</abbr></dfn>
+            ><abbr title="Qualified Signature Creation Device">QSCD</abbr></dfn
+          >
         </dt>
         <dd>
           Protected signing device or service boundary used to create qualified
@@ -280,7 +469,9 @@
         <dt>
           <dfn id="dfn-etsi"
             ><abbr title="European Telecommunications Standards Institute"
-              >ETSI</abbr></dfn>
+              >ETSI</abbr
+            ></dfn
+          >
         </dt>
         <dd>
           Standards body publishing remote-signing technical standards used in
@@ -289,7 +480,10 @@
 
         <dt>
           <dfn id="dfn-cen"
-            ><abbr title="European Committee for Standardization">CEN</abbr></dfn>
+            ><abbr title="European Committee for Standardization"
+              >CEN</abbr
+            ></dfn
+          >
         </dt>
         <dd>
           Standards body whose [=EN=] 419 241 series defines server-signing
@@ -309,19 +503,27 @@
         <dt>
           <dfn id="dfn-esi"
             ><abbr title="Electronic Signatures and Infrastructures"
-              >ESI</abbr></dfn>
+              >ESI</abbr
+            ></dfn
+          >
         </dt>
-        <dd>[=ETSI=] working domain label for signature and trust standards.</dd>
+        <dd>
+          [=ETSI=] working domain label for signature and trust standards.
+        </dd>
 
         <dt>
           <dfn id="dfn-ades"
-            ><abbr title="Advanced Electronic Signatures">AdES</abbr></dfn>
+            ><abbr title="Advanced Electronic Signatures">AdES</abbr></dfn
+          >
         </dt>
-        <dd>Advanced electronic signature model referenced by [=ETSI=] profiles.</dd>
+        <dd>
+          Advanced electronic signature model referenced by [=ETSI=] profiles.
+        </dd>
 
         <dt>
           <dfn id="dfn-scdev"
-            ><abbr title="Signature Creation Device">SCDev</abbr></dfn>
+            ><abbr title="Signature Creation Device">SCDev</abbr></dfn
+          >
         </dt>
         <dd>
           Signature creation device component term used in remote [=QSCD=]
@@ -330,7 +532,8 @@
 
         <dt>
           <dfn id="dfn-api"
-            ><abbr title="Application Programming Interface">API</abbr></dfn>
+            ><abbr title="Application Programming Interface">API</abbr></dfn
+          >
         </dt>
         <dd>Protocol interface exposed for remote-signing operations.</dd>
 
@@ -341,7 +544,8 @@
 
         <dt>
           <dfn id="dfn-dtbsr"
-            ><abbr title="Data To Be Signed Representation">DTBSR</abbr></dfn>
+            ><abbr title="Data To Be Signed Representation">DTBSR</abbr></dfn
+          >
         </dt>
         <dd>
           Representation of [=DTBS=] that remote-signing components process
@@ -350,7 +554,8 @@
 
         <dt>
           <dfn id="dfn-sad"
-            ><abbr title="Signature Activation Data">SAD</abbr></dfn>
+            ><abbr title="Signature Activation Data">SAD</abbr></dfn
+          >
         </dt>
         <dd>
           Activation material used to authorize a remote signing operation
@@ -359,24 +564,29 @@
 
         <dt>
           <dfn id="dfn-ocsp"
-            ><abbr title="Online Certificate Status Protocol">OCSP</abbr></dfn>
+            ><abbr title="Online Certificate Status Protocol">OCSP</abbr></dfn
+          >
         </dt>
         <dd>Certificate status source used in validation.</dd>
 
         <dt>
           <dfn id="dfn-crl"
-            ><abbr title="Certificate Revocation List">CRL</abbr></dfn>
+            ><abbr title="Certificate Revocation List">CRL</abbr></dfn
+          >
         </dt>
         <dd>Revocation status source used in validation.</dd>
 
         <dt>
           <dfn id="dfn-tl"><abbr title="Trusted List">TL</abbr></dfn>
         </dt>
-        <dd>National trusted list used for trusted service status discovery.</dd>
+        <dd>
+          National trusted list used for trusted service status discovery.
+        </dd>
 
         <dt>
           <dfn id="dfn-lotl"
-            ><abbr title="List of Trusted Lists">LOTL</abbr></dfn>
+            ><abbr title="List of Trusted Lists">LOTL</abbr></dfn
+          >
         </dt>
         <dd>
           List that provides discovery pointers to [=TL=] entries
@@ -439,14 +649,13 @@
         the legal reference for conformance checks [[EIDAS2025_1567]].
       </p>
       <p>
-        In Annex terms, Implementing Regulation (EU) 2025/1567 references
-        ETSI EN 319 401 V3.1.1 for that legal conformance context
-        [[EIDAS2025_1567]].
+        In Annex terms, Implementing Regulation (EU) 2025/1567 references ETSI
+        EN 319 401 V3.1.1 for that legal conformance context [[EIDAS2025_1567]].
       </p>
       <p>
-        Trusted-list technical specifications are defined by Implementing Decision
-        (EU) 2015/1505, as amended by Implementing Decision (EU) 2025/2164
-        [[TL2015_1505]] [[EIDAS2025_2164]].
+        Trusted-list technical specifications are defined by Implementing
+        Decision (EU) 2015/1505, as amended by Implementing Decision (EU)
+        2025/2164 [[TL2015_1505]] [[EIDAS2025_2164]].
       </p>
       <p>
         [=ETSI=] [=TS=] 119 432 defines the remote-signing [=API=] model, but it
@@ -475,7 +684,9 @@
         <li>Signature key activation state.</li>
         <li>[=SAD=] and activation decisions.</li>
         <li>[=DTBS=]/[=DTBSR=] linkage from display to signature input.</li>
-        <li>Validation-time trust material ([=OCSP=]/[=CRL=]/[=TL=]/[=LOTL=]).</li>
+        <li>
+          Validation-time trust material ([=OCSP=]/[=CRL=]/[=TL=]/[=LOTL=]).
+        </li>
         <li>Audit and event logs.</li>
       </ul>
       <p><strong>Main boundary split:</strong></p>
@@ -488,9 +699,8 @@
         <li>
           What often stays inside the provider: user-intent path details,
           activation internals and internal authorization decisions in
-          [=CEN=]/ETSI server-signing models, and
-          internal log semantics [[ETSI119431_1]] [[ETSI319401]]
-          [[ETSI119431_2]].
+          [=CEN=]/ETSI server-signing models, and internal log semantics
+          [[ETSI119431_1]] [[ETSI319401]] [[ETSI119431_2]].
         </li>
         <li>
           The remote [=QSCD=]/[=SCDev=] split is an explicit boundary where
@@ -514,9 +724,9 @@
 
       <h3>R1: Show A, Sign B</h3>
       <p>
-        <strong>THREAT:</strong> A compromised signer-side frontend keeps a valid
-        authenticated session and, after displaying content A, sends a different
-        [=DTBSR=] (content B) in the signing request.
+        <strong>THREAT:</strong> A compromised signer-side frontend keeps a
+        valid authenticated session and, after displaying content A, sends a
+        different [=DTBSR=] (content B) in the signing request.
       </p>
       <p>
         <strong>MITIGATION:</strong> [=ETSI=] requires controlled signature
@@ -556,20 +766,21 @@
         <strong>THREAT:</strong> For one validation decision, the baseline can
         yield a valid status result while associated validation-report evidence
         elements remain optional in the report model; therefore a complete
-        decision-time evidence snapshot is not guaranteed to exist for every case
-        [[ETSI119102_2]] [[ETSI319102_1]].
+        decision-time evidence snapshot is not guaranteed to exist for every
+        case [[ETSI119102_2]] [[ETSI319102_1]].
       </p>
       <p>
         <strong>MITIGATION:</strong> [=eIDAS=] and trusted-list acts define
-        legal validation conditions and trust-list context, and [=ETSI=]
-        EN 319 102-1 / TS 119 102-2 define validation and report structures that
-        can include validation data used [[EIDAS910]] [[TL2015_1505]]
+        legal validation conditions and trust-list context, and [=ETSI=] EN 319
+        102-1 / TS 119 102-2 define validation and report structures that can
+        include validation data used [[EIDAS910]] [[TL2015_1505]]
         [[EIDAS2025_2164]] [[ETSI319102_1]] [[ETSI119102_2]].
       </p>
       <p>
         <strong>RESIDUAL:</strong> If decision-time validation inputs are not
         immutably retained and disclosed, whether by design gaps or privileged
-        tampering, external replay cannot reconstruct the original decision path.
+        tampering, external replay cannot reconstruct the original decision
+        path.
       </p>
 
       <h3>R4: Evidence Stays Inside the Provider</h3>
@@ -583,23 +794,22 @@
       </p>
       <p>
         <strong>RESIDUAL:</strong> External parties may still be unable to
-        verify the full activation/evidence event history without relying on provider
-        narrative.
+        verify the full activation/evidence event history without relying on
+        provider narrative.
       </p>
     </section>
 
-      <section id="alternative">
+    <section id="alternative">
       <h2>Alternative</h2>
       <p>
         Alternative direction: define recognition criteria under which consumer
-        devices with specified secure components can serve as
-        [=QSCD=]-class signature creation environments for decentralized legal
-        trust workflows.
+        devices with specified secure components can serve as [=QSCD=]-class
+        signature creation environments for decentralized legal trust workflows.
       </p>
       <p>
         Companion report:
-        <a href="https://z-base.github.io/lqscd-report/"
-          >https://z-base.github.io/lqscd-report/</a
+        <a href="https://sovereignbase.dev/lqscd-report/"
+          >https://sovereignbase.dev/lqscd-report/</a
         >
       </p>
     </section>
